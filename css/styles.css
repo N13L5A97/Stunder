@@ -1,0 +1,432 @@
+/* importeer fonts uit onze eigen mappen */
+@font-face {
+  font-family: 'FilsonPro';
+  src: url('../assets/FilsonProRegular.otf');
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+	font-family: 'AcuminVariable';
+	src: url('../assets/AcuminVariableConcept.otf');
+	font-style: normal;
+	font-weight: 300;
+}
+
+/* CSS reset, deze zet standaard alle witruimte (margin en padding) op 0. Je moet dan zelf overal weer margin en padding toevoegen op de elementen waar je dit wel wilt hebben.
+   Ook zorgen we dat voor alle block elementen de afmetingen niet alleen worden bepaald door de content, maar dat ook padding en border meetellen. 
+   Dit ontwerpt makkelijker.
+   Zie: https://www.internetingishard.com/html-and-css/css-box-model/#content-boxes-and-border-boxes  */
+*, html {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+/* Stel een witte achtergrond in en geef de body een beetje margin, relatief ten opzichte van het schermformaat */
+
+header img{
+	width: 100%;
+}
+
+h1{
+	font-family: 'FilsonPro';
+	font-size: 3em;
+}
+
+h2{
+    font-family: 'FilsonPro';
+	font-size: 1.5em;
+}
+
+h3{
+	font-family: 'AcuminVariable';
+    font-weight: 100;
+    font-size: 1em;
+}
+
+a{
+ text-decoration: none;
+}
+
+ul{
+	margin-top: 0.2em;
+}
+
+li{
+	list-style: square;
+    font-size: 11px;
+    margin-left: 1em;
+    font-family: 'AcuminVariable';
+}
+
+/* profile setup*/
+
+#profileimg{
+	width: 80%;
+    display: flex;
+    margin: auto;
+    margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+#setuppage a{
+	display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #ea86b3;
+    padding: 1em;
+    color: white;
+}
+
+
+/* Swipe page */
+#swipepage main {
+	margin-top: 1em;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+#swipe article{
+	display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#swipe2 article{
+	display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#swipe{
+	width: 100%;
+	background-image: url("../images/Bijou/bijou5.png");
+	background-size: cover;
+	aspect-ratio: 1 / 1;
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+}
+
+#swipe2{
+	width: 100%;
+	background-image: url("../images/Lisa/lisa1.png");
+	background-size: cover;
+	aspect-ratio: 1 / 1;
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+}
+
+#dislike{
+	position: relative;
+    top: 0.3em;
+    width: 8em;
+}
+
+#like{
+	position: relative;
+    top: 0.3em;
+    width: 8em;
+}
+
+#infosection{
+	margin-top: 1em;
+	display: flex;
+}
+
+#tekstbox {
+	border: solid 0.1em black;
+    padding: 0.3em 0.5em 0.5em 0.5em;
+    width: 19.5em;
+}
+
+#tekstbox section{
+	display: flex;
+    justify-content: space-between;
+}
+
+#tekstbox h2{
+	font-size: 18px;
+}
+
+#vlag{
+	aspect-ratio: 1 / 1;
+    width: 5em;
+    margin-right: 1em;
+}
+
+#meerinfo {
+	justify-content: center;
+    background-color: rgb(230, 208, 72);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+    padding: 0.6em 0 0.5em;
+    margin-top: 1em;
+    -webkit-text-stroke-width: 2px;
+}
+
+
+
+/* Footer */
+.footerbg{
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 101%;
+	position: fixed;
+	bottom: -1px;
+}	
+
+#plane{
+	position: fixed;
+    z-index: 1;
+    bottom: 2.2em;
+    left: calc(100% - 61%);
+    height: 3.5em;
+}
+	
+#filter{
+	position: fixed;
+    z-index: 1;
+    bottom: 0.5em;
+    left: 2.5em;
+    height: 2.6em;
+}
+		
+#settings{
+	position: fixed;
+    z-index: 1;
+    bottom: 0.5em;
+    right: 2.5em;
+    height: 3em;	
+}
+
+
+
+/* vanaf hier chat css */
+#search{
+	display: block;
+    width: 96%;
+    background-color: #efd138;
+    padding: 3px 3px 3px 20em;
+    margin: 0.3em 0.5em 0.5em 0.5em;
+}
+
+#chat a{
+	color: black;
+}
+
+#chat article{
+    display: flex;
+    flex-direction: row;
+}
+
+#chat section article{
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+#chat section article figure {
+    margin-left: 0.5em;
+}
+
+#chatflag{
+	width: 1.3em;
+    height: 1.3em;
+    z-index: 1;
+    margin-left: -2em;
+    margin-top: 0.1em;
+}
+
+#chatexit{
+	width: 2em;
+    height: 2em;
+    margin-left: 10.8em;
+}
+
+.readicon{
+	width: 1.5em;
+    height: 1em;
+    margin-top: 2em;
+    margin-right: 1em;
+}
+
+.readchat{
+	display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#bijou{
+    background-image: url("../images/Bijou/bijou5.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 4em;
+    aspect-ratio: 1 / 1;
+}
+
+#lisa{
+    background-image: url("../images/Lisa/lisa1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 4em;
+    aspect-ratio: 1 / 1;
+}
+
+#roo{
+    background-image: url("../images/Roo/roo2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 4em;
+    aspect-ratio: 1 / 1;
+}
+
+
+.tekst{
+    left: 5.3em;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 3.3em;
+}
+.tijd{
+    display: flex;
+    right: 1em;
+    position: absolute;
+}
+
+.tijd img{
+	width: 1em;
+    height: 1em;
+    margin-right: 0.3em;
+}
+
+
+.chat::after{
+	content: "";
+    display: block;
+    height: 0.01em;
+    background-color: rgb(87, 87, 87);
+    width: 96%;
+    margin: auto;
+}
+
+#groupicon{
+	position: fixed;
+    z-index: 5;
+    bottom: 0.5em;
+    left: 3em;
+    height: 2.5em;
+}
+
+#exiticon{
+	position: fixed;
+    z-index: 5;
+    bottom: 2em;
+    left: calc(100% - 59%);
+    height: 4em;
+}
+
+#settings2{
+	position: fixed;
+    z-index: 5;
+    bottom: 0.5em;
+    right: 3em;
+    height: 3em;
+}
+
+
+/* Match page */
+#match{
+    background-image: url(../images/webassets/matchbg.png);
+    background-size: cover;
+    aspect-ratio: 1 / 1.8;
+	width: 100%
+}
+
+#match section{
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 10em;
+}
+
+#match h1{
+	padding: 0.5em 2.5em;
+    background-color: #597AB8;
+    color: white;
+    display: flex;
+    width: 50%;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+}
+
+
+#match a h2{
+	background-color: #efd138;
+    color: white;
+    padding: 0.5em;
+    width: 64%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 0.4em;
+}
+
+#match img{
+	width: 64%;
+    margin: auto;
+    margin-top: 0.5em;
+}
+
+#match a img{
+	width: 3em;
+    margin-left: 17.5em;
+    margin-bottom: -2em;
+}
+
+#match section :nth-child(1){
+	z-index: 1;
+}
+
+
+/* In chat */
+
+#inchat figure img{
+	width: 4em;
+	margin-right: 0.5em;
+	aspect-ratio: 1 / 1;
+}
+
+#inchat section{
+	display: flex;
+    margin: 0.2em 0.5em 2em 0.5em;
+}
+
+#inchat article h1{
+	font-size: 1.5em;
+}
+
+#inchat article h2{
+	font-size: 0.8em;
+}
+
+#message{
+	width: 80%;
+	display: block;
+	margin-left: 4.5em;
+}
+
+#inchat figure::after{
+	content: "";
+    display: block;
+    height: 0.01em;
+    background-color: rgb(87, 87, 87);
+    width: 500%;
+    margin: auto;
+}
